@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprendiendo Programación Web</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta author="Ramsés de Jesús Rodríguez Ureña (Dominicaine in Morocco)">
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="topnav" aria-label="Navegación principal">
+      <!-- HTML -->
+      <div class="tab dropdown">
+        <a class="tabLink" href="#html" aria-haspopup="true" aria-expanded="false">HTML</a>
+        <div class="dropdownMenu" role="menu" aria-label="Temas de HTML">
+          <a role="menuitem" href="#lab-html-estructura">Estructura</a>
+          <a role="menuitem" href="#lab-html-formularios">Formularios</a>
+          <a role="menuitem" href="#lab-html-enlaces">Enlaces</a>
+          <a role="menuitem" href="#lab-html-imagenes">Imágenes</a>
+          <a role="menuitem" href="#lab-html-listas">Listas</a>
+          <a role="menuitem" href="#lab-html-parrafos">Párrafos</a>
+          <a role="menuitem" href="#lab-html-audio-video">Audio / Video</a>
+          <a role="menuitem" href="#lab-html-canvas">Canvas</a>
+          <a role="menuitem" href="#lab-html-contenedores">Contenedores</a>
+          <a role="menuitem" href="#lab-html-details">Details / summary</a>
+          <a role="menuitem" href="#lab-html-iframes">Iframes</a>
+          <a role="menuitem" href="#lab-html-fieldset">Fieldset</a>
+          <a role="menuitem" href="#lab-html-tablas">Tablas</a>
+          <a role="menuitem" href="#lab-html-textareas">Textareas</a>
+        </div>
+      </div>
+
+      <!-- CSS (FIX: links a IDs reales dentro del lab) -->
+      <div class="tab dropdown">
+        <a class="tabLink" href="#lab-css" aria-haspopup="true" aria-expanded="false">CSS</a>
+        <div class="dropdownMenu" role="menu" aria-label="Temas de CSS">
+          <a role="menuitem" href="#lab-css">Ir al laboratorio CSS</a>
+          <a role="menuitem" href="#lab-css-boxmodel">Box model / box-sizing</a>
+          <a role="menuitem" href="#lab-css-colores-texto">Colores / Texto</a>
+          <a role="menuitem" href="#lab-css-unidades">Unidades</a>
+          <a role="menuitem" href="#lab-css-selectores">Selectores / Atributos</a>
+          <a role="menuitem" href="#lab-css-pseudoclases">Pseudoclases</a>
+          <a role="menuitem" href="#lab-css-pseudoelementos">Pseudo-elementos</a>
+          <a role="menuitem" href="#lab-css-flexbox">Flexbox</a>
+          <a role="menuitem" href="#lab-css-grid">Grid</a>
+          <a role="menuitem" href="#lab-css-position">Position</a>
+          <a role="menuitem" href="#lab-css-herencia">Herencia</a>
+        </div>
+      </div>
+
+      <!-- JS -->
+      <div class="tab dropdown">
+        <a class="tabLink" href="#lab-js" aria-haspopup="true" aria-expanded="false">JavaScript</a>
+        <div class="dropdownMenu" role="menu" aria-label="Temas de JavaScript">
+          <a role="menuitem" href="#lab-js">Ir al laboratorio JS</a>
+          <a role="menuitem" href="#lab-js-dom">DOM</a>
+          <a role="menuitem" href="#lab-js-events">Eventos</a>
+          <a role="menuitem" href="#lab-js-storage">localStorage</a>
+          <a role="menuitem" href="#lab-js-fetch">Fetch</a>
+        </div>
+      </div>
+
+      <a class="tab tab--about" href="#about">Sobre mí</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <main class="content">
+      <section class="hero">
+        <h1>Aprendiendo Programación Web paso a paso</h1>
+        <p>
+          Esta página sigue la estructura de tu esquema: 3 columnas (HTML/CSS/JS)
+          y una barra lateral con “About me” y nociones importantes.
+        </p>
+      </section>
+
+      <section class="columns">
+        <article id="html" class="card">
+          <h2>HTML</h2>
+          <p class="muted">Estructura y contenido de la web.</p>
+
+          <details class="accordion">
+            <summary>Historia sobre HTML</summary>
+            <p>
+              HTML nació para estructurar documentos en la web. Hoy se usa para crear
+              páginas accesibles y semánticas usando etiquetas como header, main, section y footer.
+            </p>
+          </details>
+
+          <h3>Nociones importantes</h3>
+          <ul>
+            <li>Semántica (header/main/section/footer)</li>
+            <li>Atributos: <code>id</code>, <code>class</code>, <code>src</code>, <code>href</code></li>
+            <li>Formularios: <code>label</code> + <code>input</code></li>
+          </ul>
+
+          <h3>Ejemplo</h3>
+          <pre class="code"><code>&lt;section&gt;
+    &lt;h1&gt;Hola&lt;/h1&gt;
+    &lt;p&gt;Mi primera página&lt;/p&gt;
+    &lt;/section&gt;</code></pre>
+          <button class="copyBtn" type="button" data-copy-target="prev">Copiar</button>
+
+          <p class="exercise"><strong>Mini ejercicio:</strong> crea un formulario con nombre y email.</p>
+        </article>
+
+        <article id="css" class="card">
+          <h2>CSS</h2>
+          <p class="muted">Diseño, layout y estilo visual.</p>
+
+          <details class="accordion">
+            <summary>Historia sobre CSS</summary>
+            <p>
+              CSS separa el contenido del diseño. Permite controlar colores, tipografías,
+              layout (Flexbox/Grid) y adaptabilidad (responsive).
+            </p>
+          </details>
+
+          <h3>Nociones importantes</h3>
+          <ul>
+            <li>Box model y <code>box-sizing</code></li>
+            <li>Flexbox y Grid</li>
+            <li>Pseudoclases: <code>:hover</code>, <code>:focus</code></li>
+          </ul>
+
+          <h3>Ejemplo</h3>
+          <pre class="code"><code>.card{
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }</code></pre>
+          <button class="copyBtn" type="button" data-copy-target="prev">Copiar</button>
+
+          <p class="exercise"><strong>Mini ejercicio:</strong> haz un botón con hover y transición.</p>
+        </article>
+
+        <article id="js" class="card">
+          <h2>JavaScript</h2>
+          <p class="muted">Interacción y lógica en el navegador.</p>
+
+          <details class="accordion">
+            <summary>Historia sobre JavaScript</summary>
+            <p>
+              JavaScript permite manipular el DOM, responder a eventos y crear
+              experiencias dinámicas (formularios, animaciones, apps).
+            </p>
+          </details>
+
+          <h3>Nociones importantes</h3>
+          <ul>
+            <li>Variables y funciones</li>
+            <li>DOM: <code>querySelector</code></li>
+            <li>Eventos: <code>click</code>, <code>input</code></li>
+          </ul>
+
+          <h3>Ejemplo</h3>
+          <pre class="code"><code>document.querySelector("button").addEventListener("click", () =&gt; {
+    alert("Hola!");
+    });</code></pre>
+          <button class="copyBtn" type="button" data-copy-target="prev">Copiar</button>
+
+          <p class="exercise"><strong>Mini ejercicio:</strong> al hacer clic cambia el texto de un párrafo.</p>
+        </article>
+      </section>
+
+      <!-- LAB HTML -->
+      <section class="lab" aria-label="Laboratorio de pruebas HTML">
+        <h2>Laboratorio HTML (pruebas rápidas)</h2>
+        <p class="muted">Entra desde el menú de HTML y prueba atributos cambiando valores.</p>
+
+        <div id="lab-html-estructura" class="labCard">
+          <h3>Estructura</h3>
+          <p class="muted">Prueba semántica: header/main/footer (solo demostración visual).</p>
+          <div class="labDemo">
+            <div class="demoBox">
+              <header class="demoHeader">header</header>
+              <main class="demoMain">main</main>
+              <footer class="demoFooter">footer</footer>
+            </div>
+          </div>
+        </div>
+
+        <div id="lab-html-formularios" class="labCard">
+          <h3>Formularios</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labRequired">required</label>
+              <select id="labRequired" class="labSelect">
+                <option value="true">true</option>
+                <option value="false" selected>false</option>
+              </select>
+
+              <label class="labLabel" for="labType">type</label>
+              <select id="labType" class="labSelect">
+                <option value="text" selected>text</option>
+                <option value="email">email</option>
+                <option value="password">password</option>
+                <option value="number">number</option>
+              </select>
+
+              <label class="labLabel" for="labPlaceholder">placeholder</label>
+              <input id="labPlaceholder" class="labInput" type="text" value="Escribe aquí..." />
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <label class="labLabel" for="labInputPreview">Campo:</label>
+              <input id="labInputPreview" class="labInput" type="text" placeholder="Escribe aquí..." />
+              <p id="labFormHint" class="muted"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="lab-html-enlaces" class="labCard">
+          <h3>Enlaces</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labHref">href</label>
+              <input id="labHref" class="labInput" type="text" value="#css" />
+
+              <label class="labLabel" for="labTarget">target</label>
+              <select id="labTarget" class="labSelect">
+                <option value="_self" selected>_self</option>
+                <option value="_blank">_blank</option>
+              </select>
+
+              <label class="labLabel" for="labRel">rel (recomendado con _blank)</label>
+              <input id="labRel" class="labInput" type="text" value="noopener noreferrer" />
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <a id="labLinkPreview" class="labLink" href="#css">Ir a CSS</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="lab-html-imagenes" class="labCard">
+          <h3>Imágenes</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labAlt">alt</label>
+              <input id="labAlt" class="labInput" type="text" value="Imagen de ejemplo" />
+
+              <label class="labLabel" for="labImgWidth">width (px)</label>
+              <input id="labImgWidth" class="labInput" type="number" value="180" min="80" max="400" />
+
+              <label class="labLabel" for="labLazy">loading</label>
+              <select id="labLazy" class="labSelect">
+                <option value="lazy" selected>lazy</option>
+                <option value="eager">eager</option>
+              </select>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <img
+                id="labImgPreview"
+                src="https://via.placeholder.com/360x200.png?text=Demo"
+                alt="Imagen de ejemplo"
+                loading="lazy"
+                style="width: 180px; border-radius: 12px; border: 1px solid rgba(93,89,122,0.25);"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="lab-html-listas" class="labCard">
+          <h3>Listas</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labListType">Tipo</label>
+              <select id="labListType" class="labSelect">
+                <option value="ul" selected>ul</option>
+                <option value="ol">ol</option>
+              </select>
+
+              <label class="labLabel" for="labStart">start (solo ol)</label>
+              <input id="labStart" class="labInput" type="number" value="3" min="1" />
+
+              <label class="labLabel" for="labReversed">reversed (solo ol)</label>
+              <select id="labReversed" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <div id="labListPreview"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lab-html-parrafos" class="labCard">
+          <h3>Párrafos</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labText">Texto</label>
+              <input id="labText" class="labInput" type="text" value="Este es un párrafo de prueba." />
+
+              <label class="labLabel" for="labTitleAttr">title</label>
+              <input id="labTitleAttr" class="labInput" type="text" value="Tooltip: info extra" />
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <p id="labPPreview" class="labParagraph" title="Tooltip: info extra">
+                Este es un párrafo de prueba.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7) Audio / Video -->
+        <div id="lab-html-audio-video" class="labCard">
+          <h3>Audio / Video</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labMediaType">Tipo</label>
+              <select id="labMediaType" class="labSelect">
+                <option value="audio" selected>audio</option>
+                <option value="video">video</option>
+              </select>
+
+              <label class="labLabel" for="labControls">controls</label>
+              <select id="labControls" class="labSelect">
+                <option value="true" selected>true</option>
+                <option value="false">false</option>
+              </select>
+
+              <label class="labLabel" for="labAutoplay">autoplay</label>
+              <select id="labAutoplay" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+
+              <label class="labLabel" for="labLoop">loop</label>
+              <select id="labLoop" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+
+              <p class="muted" style="margin-top:10px;">
+                Nota: <strong>autoplay</strong> suele estar bloqueado por el navegador si no está muted o si no hubo interacción del usuario.
+              </p>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <div id="labMediaPreview"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8) Canvas -->
+        <div id="lab-html-canvas" class="labCard">
+          <h3>Canvas</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labCanvasSize">Tamaño</label>
+              <select id="labCanvasSize" class="labSelect">
+                <option value="260x140" selected>260 × 140</option>
+                <option value="360x180">360 × 180</option>
+                <option value="420x220">420 × 220</option>
+              </select>
+
+              <label class="labLabel" for="labCanvasShape">Dibujo</label>
+              <select id="labCanvasShape" class="labSelect">
+                <option value="dots" selected>Puntos</option>
+                <option value="rect">Rectángulo</option>
+                <option value="circle">Círculo</option>
+                <option value="text">Texto</option>
+              </select>
+
+              <button id="labCanvasDraw" class="btn" type="button" style="margin-top:10px;">Dibujar</button>
+              <button id="labCanvasClear" class="btn" type="button" style="margin-top:10px;">Limpiar</button>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <canvas id="labCanvas" width="260" height="140" style="border-radius:12px; border:1px solid rgba(93,89,122,.25); background:white;"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9) Contenedores -->
+        <div id="lab-html-contenedores" class="labCard">
+          <h3>Contenedores (div / section / article)</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labContainerTag">Etiqueta</label>
+              <select id="labContainerTag" class="labSelect">
+                <option value="div" selected>div</option>
+                <option value="section">section</option>
+                <option value="article">article</option>
+              </select>
+
+              <label class="labLabel" for="labContainerId">id</label>
+              <input id="labContainerId" class="labInput" type="text" value="mi-contenedor" />
+
+              <label class="labLabel" for="labContainerClass">class</label>
+              <input id="labContainerClass" class="labInput" type="text" value="box highlight" />
+
+              <label class="labLabel" for="labContainerRole">role</label>
+              <select id="labContainerRole" class="labSelect">
+                <option value="">(ninguno)</option>
+                <option value="region" selected>region</option>
+                <option value="article">article</option>
+                <option value="complementary">complementary</option>
+              </select>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <div id="labContainerPreview"></div>
+              <p class="muted" style="margin-top:10px;">
+                Mira el inspector del navegador para ver el tag/id/class real.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10) details / summary -->
+        <div id="lab-html-details" class="labCard">
+          <h3>details / summary</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labDetailsOpen">open</label>
+              <select id="labDetailsOpen" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+
+              <label class="labLabel" for="labSummaryText">summary (texto)</label>
+              <input id="labSummaryText" class="labInput" type="text" value="Haz clic para ver más" />
+
+              <label class="labLabel" for="labDetailsText">Contenido</label>
+              <input id="labDetailsText" class="labInput" type="text" value="Este contenido aparece al desplegar." />
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <details id="labDetailsPreview" class="labDetails">
+                <summary id="labSummaryPreview">Haz clic para ver más</summary>
+                <p id="labDetailsContent" style="margin:10px 0 0;">Este contenido aparece al desplegar.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11) iframes -->
+        <div id="lab-html-iframes" class="labCard">
+          <h3>iframes</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labIframeSrc">src</label>
+              <select id="labIframeSrc" class="labSelect">
+                <option value="https://example.com" selected>https://example.com</option>
+                <option value="https://www.wikipedia.org">https://www.wikipedia.org</option>
+              </select>
+
+              <label class="labLabel" for="labIframeTitle">title</label>
+              <input id="labIframeTitle" class="labInput" type="text" value="Iframe de prueba" />
+
+              <label class="labLabel" for="labIframeLoading">loading</label>
+              <select id="labIframeLoading" class="labSelect">
+                <option value="lazy" selected>lazy</option>
+                <option value="eager">eager</option>
+              </select>
+
+              <p class="muted" style="margin-top:10px;">
+                Nota: algunos sitios bloquean iframes con políticas de seguridad (X-Frame-Options / CSP).
+              </p>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <iframe
+                id="labIframePreview"
+                src="https://example.com"
+                title="Iframe de prueba"
+                loading="lazy"
+                style="width:100%; height:220px; border-radius:12px; border:1px solid rgba(93,89,122,.25); background:white;"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12) fieldset -->
+        <div id="lab-html-fieldset" class="labCard">
+          <h3>fieldset</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labFieldsetDisabled">disabled</label>
+              <select id="labFieldsetDisabled" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+
+              <label class="labLabel" for="labLegendText">legend</label>
+              <input id="labLegendText" class="labInput" type="text" value="Datos del usuario" />
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <fieldset id="labFieldsetPreview" class="labFieldset">
+                <legend id="labLegendPreview">Datos del usuario</legend>
+
+                <label class="labLabel" for="labName">Nombre</label>
+                <input id="labName" class="labInput" type="text" placeholder="Tu nombre" />
+
+                <label class="labLabel" for="labEmail">Email</label>
+                <input id="labEmail" class="labInput" type="email" placeholder="tu@email.com" />
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13) Tablas -->
+        <div id="lab-html-tablas" class="labCard">
+          <h3>Tablas</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labTableCaption">caption</label>
+              <input id="labTableCaption" class="labInput" type="text" value="Tabla de ejemplo" />
+
+              <label class="labLabel" for="labTableBorder">border</label>
+              <select id="labTableBorder" class="labSelect">
+                <option value="true" selected>true</option>
+                <option value="false">false</option>
+              </select>
+
+              <label class="labLabel" for="labTableHead">thead</label>
+              <select id="labTableHead" class="labSelect">
+                <option value="true" selected>true</option>
+                <option value="false">false</option>
+              </select>
+
+              <label class="labLabel" for="labTableRows">Filas</label>
+              <select id="labTableRows" class="labSelect">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <div id="labTablePreview"></div>
+            </div>
+          </div>
+
+          <p class="muted" style="margin-top:10px;">
+            Usa <strong>thead / tbody</strong> para accesibilidad y mejor lectura por lectores de pantalla.
+          </p>
+        </div>
+
+        <!-- 14) Textareas -->
+        <div id="lab-html-textareas" class="labCard">
+          <h3>Textareas</h3>
+          <div class="labGrid">
+            <div>
+              <label class="labLabel" for="labTextareaRows">rows</label>
+              <input id="labTextareaRows" class="labInput" type="number" min="2" max="12" value="4" />
+
+              <label class="labLabel" for="labTextareaCols">cols</label>
+              <input id="labTextareaCols" class="labInput" type="number" min="10" max="60" value="30" />
+
+              <label class="labLabel" for="labTextareaPlaceholder">placeholder</label>
+              <input id="labTextareaPlaceholder" class="labInput" type="text" value="Escribe aquí..." />
+
+              <label class="labLabel" for="labTextareaReadonly">readonly</label>
+              <select id="labTextareaReadonly" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+
+              <label class="labLabel" for="labTextareaDisabled">disabled</label>
+              <select id="labTextareaDisabled" class="labSelect">
+                <option value="false" selected>false</option>
+                <option value="true">true</option>
+              </select>
+            </div>
+
+            <div class="labDemo">
+              <p class="muted">Resultado:</p>
+              <textarea
+                id="labTextareaPreview"
+                rows="4"
+                cols="30"
+                placeholder="Escribe aquí..."
+                class="labTextarea"
+              ></textarea>
+            </div>
+          </div>
+
+          <p class="muted" style="margin-top:10px;">
+            <strong>readonly</strong> permite selección, <strong>disabled</strong> no.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- LAB CSS (FIX: IDs por bloque, sin borrar tu lab) -->
+    <section id="lab-css" class="lab" aria-label="Laboratorio de pruebas CSS">
+      <h2>Laboratorio CSS (pruebas rápidas)</h2>
+      <p class="muted">Ajusta controles y observa el resultado en vivo.</p>
+
+      <!-- 1) Box model + Box sizing -->
+      <div id="lab-css-boxmodel" class="labCard">
+        <h3>Box model + box-sizing</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssBoxSizing">box-sizing</label>
+            <select id="cssBoxSizing" class="labSelect">
+              <option value="content-box" selected>content-box</option>
+              <option value="border-box">border-box</option>
+            </select>
+
+            <label class="labLabel" for="cssBoxWidth">width (px)</label>
+            <input id="cssBoxWidth" class="labInput" type="number" min="120" max="520" value="260" />
+
+            <label class="labLabel" for="cssPadding">padding (px)</label>
+            <input id="cssPadding" class="labInput" type="number" min="0" max="60" value="16" />
+
+            <label class="labLabel" for="cssBorder">border (px)</label>
+            <input id="cssBorder" class="labInput" type="number" min="0" max="16" value="2" />
+
+            <label class="labLabel" for="cssMargin">margin (px)</label>
+            <input id="cssMargin" class="labInput" type="number" min="0" max="40" value="8" />
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div class="cssPreviewArea">
+              <div id="cssBox" class="cssBox">
+                Caja de prueba<br />
+                <span class="muted">Mira cómo cambia el tamaño real.</span>
+              </div>
+            </div>
+            <p id="cssBoxNote" class="muted" style="margin-top:10px;"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2) Colores + texto -->
+      <div id="lab-css-colores-texto" class="labCard">
+        <h3>Colores + texto</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssTextColor">color</label>
+            <select id="cssTextColor" class="labSelect">
+              <option value="var(--ink)" selected>var(--ink)</option>
+              <option value="#2f2b44">#2f2b44</option>
+              <option value="var(--primary)">var(--primary)</option>
+              <option value="var(--secondary)">var(--secondary)</option>
+            </select>
+
+            <label class="labLabel" for="cssBg">background</label>
+            <select id="cssBg" class="labSelect">
+              <option value="rgba(57,161,250,.10)" selected>azul suave</option>
+              <option value="rgba(76,57,250,.10)">violeta suave</option>
+              <option value="rgba(250,199,57,.18)">amarillo suave</option>
+              <option value="#ffffff">blanco</option>
+            </select>
+
+            <label class="labLabel" for="cssFontSize">font-size (px)</label>
+            <input id="cssFontSize" class="labInput" type="number" min="12" max="30" value="16" />
+
+            <label class="labLabel" for="cssFontWeight">font-weight</label>
+            <select id="cssFontWeight" class="labSelect">
+              <option value="400">400</option>
+              <option value="600" selected>600</option>
+              <option value="800">800</option>
+            </select>
+
+            <label class="labLabel" for="cssLineHeight">line-height</label>
+            <select id="cssLineHeight" class="labSelect">
+              <option value="1.2">1.2</option>
+              <option value="1.4" selected>1.4</option>
+              <option value="1.6">1.6</option>
+              <option value="2">2</option>
+            </select>
+
+            <label class="labLabel" for="cssAlign">text-align</label>
+            <select id="cssAlign" class="labSelect">
+              <option value="left" selected>left</option>
+              <option value="center">center</option>
+              <option value="right">right</option>
+              <option value="justify">justify</option>
+            </select>
+
+            <label class="labLabel" for="cssDecor">text-decoration</label>
+            <select id="cssDecor" class="labSelect">
+              <option value="none" selected>none</option>
+              <option value="underline">underline</option>
+              <option value="line-through">line-through</option>
+            </select>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div id="cssTextCard" class="cssTextCard">
+              <h4 class="cssTextTitle">Título de ejemplo</h4>
+              <p class="cssTextP">
+                Este párrafo sirve para probar <strong>color</strong>, <strong>background</strong>,
+                tamaño de fuente, alineación, etc.
+              </p>
+              <a class="cssTextLink" href="#lab-css">Enlace de ejemplo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3) Unidades -->
+      <div id="lab-css-unidades" class="labCard">
+        <h3>Unidades (px / rem / em / % / vw)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssUnitType">Unidad</label>
+            <select id="cssUnitType" class="labSelect">
+              <option value="px" selected>px</option>
+              <option value="rem">rem</option>
+              <option value="em">em</option>
+              <option value="%">%</option>
+              <option value="vw">vw</option>
+            </select>
+
+            <label class="labLabel" for="cssUnitValue">Valor</label>
+            <input id="cssUnitValue" class="labInput" type="number" min="1" max="120" value="18" />
+
+            <p class="muted" style="margin-top:10px;">
+              Nota: <strong>em</strong> depende del tamaño del padre, <strong>rem</strong> del root.
+            </p>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div class="cssUnitParent">
+              Padre
+              <div id="cssUnitChild" class="cssUnitChild">
+                Hijo con font-size en unidad seleccionada
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4) Selectores + atributo -->
+      <div id="lab-css-selectores" class="labCard">
+        <h3>Selectores + selector de atributos</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssSelectorType">Selector</label>
+            <select id="cssSelectorType" class="labSelect">
+              <option value=".item" selected>.item (clase)</option>
+              <option value="#special">#special (id)</option>
+              <option value="li">li (etiqueta)</option>
+              <option value='[data-kind="hot"]'>[data-kind="hot"] (atributo)</option>
+              <option value='a[target="_blank"]'>a[target="_blank"] (atributo)</option>
+            </select>
+
+            <label class="labLabel" for="cssSelectorProp">Propiedad</label>
+            <select id="cssSelectorProp" class="labSelect">
+              <option value="background" selected>background</option>
+              <option value="outline">outline</option>
+              <option value="color">color</option>
+            </select>
+
+            <label class="labLabel" for="cssSelectorIntensity">Intensidad</label>
+            <select id="cssSelectorIntensity" class="labSelect">
+              <option value="soft" selected>suave</option>
+              <option value="strong">fuerte</option>
+            </select>
+
+            <p class="muted" style="margin-top:10px;">
+              Esto genera CSS real en un <code>&lt;style&gt;</code> interno.
+            </p>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+
+            <ul class="cssSelectorList">
+              <li class="item">Elemento .item</li>
+              <li class="item" data-kind="hot">Elemento .item + data-kind="hot"</li>
+              <li id="special" class="item">Elemento #special</li>
+              <li class="item">
+                <a href="#lab-css" target="_blank">Link target="_blank"</a>
+              </li>
+            </ul>
+
+            <style id="cssSelectorStyle"></style>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5) Pseudoclases -->
+      <div id="lab-css-pseudoclases" class="labCard">
+        <h3>Pseudoclases (:hover, :focus, :active)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssPseudoClass">Pseudoclase</label>
+            <select id="cssPseudoClass" class="labSelect">
+              <option value="hover" selected>:hover</option>
+              <option value="focus">:focus</option>
+              <option value="active">:active</option>
+            </select>
+
+            <label class="labLabel" for="cssPseudoEffect">Efecto</label>
+            <select id="cssPseudoEffect" class="labSelect">
+              <option value="lift" selected>elevar</option>
+              <option value="glow">brillo</option>
+              <option value="invert">invertir fondo</option>
+            </select>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <button id="cssPseudoBtn" class="btn cssPseudoBtn" type="button">
+              Pruébame (hover/focus/active)
+            </button>
+            <input class="labInput" type="text" placeholder="Tab aquí para :focus" style="margin-top:10px;" />
+            <style id="cssPseudoStyle"></style>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6) Pseudo-elementos -->
+      <div id="lab-css-pseudoelementos" class="labCard">
+        <h3>Pseudo-elementos (::before / ::after)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssPseudoEl">Pseudo-elemento</label>
+            <select id="cssPseudoEl" class="labSelect">
+              <option value="before" selected>::before</option>
+              <option value="after">::after</option>
+            </select>
+
+            <label class="labLabel" for="cssPseudoContent">content</label>
+            <input id="cssPseudoContent" class="labInput" type="text" value="Etiqueta" />
+
+            <label class="labLabel" for="cssPseudoBadge">Estilo</label>
+            <select id="cssPseudoBadge" class="labSelect">
+              <option value="tag" selected>tag</option>
+              <option value="dot">dot</option>
+              <option value="bar">bar</option>
+            </select>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div id="cssPseudoBox" class="cssPseudoBox">Elemento con pseudo-elemento</div>
+            <style id="cssPseudoElStyle"></style>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7) Flexbox -->
+      <div id="lab-css-flexbox" class="labCard">
+        <h3>Flexbox</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssFlexDir">flex-direction</label>
+            <select id="cssFlexDir" class="labSelect">
+              <option value="row" selected>row</option>
+              <option value="column">column</option>
+            </select>
+
+            <label class="labLabel" for="cssJustify">justify-content</label>
+            <select id="cssJustify" class="labSelect">
+              <option value="flex-start" selected>flex-start</option>
+              <option value="center">center</option>
+              <option value="space-between">space-between</option>
+              <option value="space-around">space-around</option>
+            </select>
+
+            <label class="labLabel" for="cssAlignItems">align-items</label>
+            <select id="cssAlignItems" class="labSelect">
+              <option value="stretch" selected>stretch</option>
+              <option value="center">center</option>
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+            </select>
+
+            <label class="labLabel" for="cssFlexGap">gap (px)</label>
+            <input id="cssFlexGap" class="labInput" type="number" min="0" max="30" value="10" />
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div id="cssFlexWrap" class="cssFlexWrap">
+              <div class="cssBlock">1</div>
+              <div class="cssBlock">2</div>
+              <div class="cssBlock">3</div>
+              <div class="cssBlock">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8) Grid -->
+      <div id="lab-css-grid" class="labCard">
+        <h3>Grid</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssGridCols">grid-template-columns</label>
+            <select id="cssGridCols" class="labSelect">
+              <option value="repeat(2, 1fr)">repeat(2, 1fr)</option>
+              <option value="repeat(3, 1fr)" selected>repeat(3, 1fr)</option>
+              <option value="200px 1fr 1fr">200px 1fr 1fr</option>
+            </select>
+
+            <label class="labLabel" for="cssGridGap">gap (px)</label>
+            <input id="cssGridGap" class="labInput" type="number" min="0" max="30" value="10" />
+
+            <label class="labLabel" for="cssGridAlign">place-items</label>
+            <select id="cssGridAlign" class="labSelect">
+              <option value="stretch" selected>stretch</option>
+              <option value="center">center</option>
+              <option value="start">start</option>
+              <option value="end">end</option>
+            </select>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div id="cssGrid" class="cssGrid">
+              <div class="cssCell">A</div>
+              <div class="cssCell">B</div>
+              <div class="cssCell">C</div>
+              <div class="cssCell">D</div>
+              <div class="cssCell">E</div>
+              <div class="cssCell">F</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9) Position -->
+      <div id="lab-css-position" class="labCard">
+        <h3>Position (static / relative / absolute / fixed / sticky)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssPosType">position</label>
+            <select id="cssPosType" class="labSelect">
+              <option value="static" selected>static</option>
+              <option value="relative">relative</option>
+              <option value="absolute">absolute</option>
+              <option value="fixed">fixed</option>
+              <option value="sticky">sticky</option>
+            </select>
+
+            <label class="labLabel" for="cssPosTop">top (px)</label>
+            <input id="cssPosTop" class="labInput" type="number" min="-40" max="80" value="10" />
+
+            <label class="labLabel" for="cssPosLeft">left (px)</label>
+            <input id="cssPosLeft" class="labInput" type="number" min="-40" max="80" value="10" />
+
+            <label class="labLabel" for="cssPosZ">z-index</label>
+            <input id="cssPosZ" class="labInput" type="number" min="0" max="50" value="5" />
+
+            <p class="muted" style="margin-top:10px;">
+              Nota: <strong>sticky</strong> requiere un contenedor con altura y scroll.
+            </p>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div class="cssPosStage">
+              <div class="cssPosBase">Caja base</div>
+              <div id="cssPosTarget" class="cssPosTarget">Caja posicionada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10) Herencia -->
+      <div id="lab-css-herencia" class="labCard">
+        <h3>Herencia (inherit / initial / unset)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="cssInheritMode">Modo</label>
+            <select id="cssInheritMode" class="labSelect">
+              <option value="inherit" selected>inherit</option>
+              <option value="initial">initial</option>
+              <option value="unset">unset</option>
+            </select>
+
+            <label class="labLabel" for="cssParentColor">Color del padre</label>
+            <select id="cssParentColor" class="labSelect">
+              <option value="var(--primary)" selected>primary</option>
+              <option value="var(--secondary)">secondary</option>
+              <option value="#2f2b44">#2f2b44</option>
+            </select>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div id="cssInheritParent" class="cssInheritParent">
+              Padre: color aplicado
+              <p id="cssInheritChild" class="cssInheritChild">
+                Hijo: <code>color: inherit/initial/unset</code>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAB JS (igual que el tuyo; ya tenía IDs correctos) -->
+    <section id="lab-js" class="lab" aria-label="Laboratorio de pruebas JavaScript">
+      <h2>Laboratorio JavaScript (pruebas rápidas)</h2>
+      <p class="muted">DOM, eventos, almacenamiento y fetch con ejemplos interactivos.</p>
+
+      <div id="lab-js-dom" class="labCard">
+        <h3>DOM (crear / eliminar / classList)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="jsItemText">Texto del elemento</label>
+            <input id="jsItemText" class="labInput" type="text" value="Nuevo elemento" />
+
+            <label class="labLabel" for="jsItemKind">data-kind</label>
+            <select id="jsItemKind" class="labSelect">
+              <option value="note" selected>note</option>
+              <option value="hot">hot</option>
+              <option value="cool">cool</option>
+            </select>
+
+            <button id="jsAddItem" class="btn" type="button" style="margin-top:10px;">Agregar</button>
+            <button id="jsClearItems" class="btn" type="button" style="margin-top:10px;">Vaciar</button>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <div id="jsDomList" class="jsDomList" aria-live="polite"></div>
+            <p class="muted" style="margin-top:10px;">Tip: click en un elemento para alternar “selected”.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="lab-js-events" class="labCard">
+        <h3>Eventos (click / input)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="jsLiveInput">input</label>
+            <input id="jsLiveInput" class="labInput" type="text" placeholder="Escribe y mira el preview..." />
+
+            <button id="jsCountClick" class="btn" type="button" style="margin-top:10px;">
+              Click counter
+            </button>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Resultado:</p>
+            <p id="jsLiveOut" class="muted">Preview: —</p>
+            <p id="jsClicksOut" class="muted">Clicks: 0</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="lab-js-storage" class="labCard">
+        <h3>localStorage (guardar / cargar)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="jsStorageKey">Key</label>
+            <input id="jsStorageKey" class="labInput" type="text" value="mi-nota" />
+
+            <label class="labLabel" for="jsStorageValue">Value</label>
+            <textarea id="jsStorageValue" class="labTextarea" rows="4" placeholder="Escribe algo para guardar..."></textarea>
+
+            <button id="jsSave" class="btn" type="button" style="margin-top:10px;">Guardar</button>
+            <button id="jsLoad" class="btn" type="button" style="margin-top:10px;">Cargar</button>
+            <button id="jsDelete" class="btn" type="button" style="margin-top:10px;">Borrar</button>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Estado:</p>
+            <p id="jsStorageStatus" class="muted">—</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="lab-js-fetch" class="labCard">
+        <h3>Fetch (GET)</h3>
+
+        <div class="labGrid">
+          <div>
+            <label class="labLabel" for="jsFetchUrl">URL</label>
+            <input
+              id="jsFetchUrl"
+              class="labInput"
+              type="text"
+              value="https://jsonplaceholder.typicode.com/todos/1"
+            />
+
+            <button id="jsFetchBtn" class="btn" type="button" style="margin-top:10px;">Fetch</button>
+
+            <p class="muted" style="margin-top:10px;">
+              Si tu navegador bloquea por CORS o estás offline, verás un error.
+            </p>
+          </div>
+
+          <div class="labDemo">
+            <p class="muted">Respuesta:</p>
+            <pre id="jsFetchOut" class="code" style="margin:0;"><code>{}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+    <section id="about" class="sidecard aboutMe">
+        <h2>Sobre mí</h2>
+
+        <p class="aboutLead">
+            Soy estudiante universitario y este proyecto es mi laboratorio personal
+            para aprender y practicar <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>
+            de forma estructurada y práctica.
+        </p>
+
+        <div class="aboutBlock">
+            <h3>Objetivo</h3>
+            <p>
+            Comprender el desarrollo web desde los fundamentos hasta conceptos
+            intermedios, creando ejemplos reales y reutilizables.
+            </p>
+        </div>
+
+        <div class="aboutBlock">
+            <h3>Cómo aprendo</h3>
+            <ul class="aboutList">
+            <li>Laboratorios interactivos con ejemplos reales</li>
+            <li>Pruebas directas de atributos y propiedades</li>
+            <li>Errores controlados para entender límites</li>
+            <li>Notas rápidas y checklist de buenas prácticas</li>
+            </ul>
+        </div>
+
+        <div class="aboutBlock">
+            <h3>Tecnologías</h3>
+            <div class="chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Flexbox</span>
+            <span class="chip">Grid</span>
+            <span class="chip">DOM</span>
+            <span class="chip">localStorage</span>
+            </div>
+        </div>
+
+        <div class="aboutBlock">
+            <h3>Meta final</h3>
+            <p>
+            Tener una base sólida en desarrollo web y un proyecto propio
+            que funcione como referencia y portafolio de aprendizaje.
+            </p>
+        </div>
+
+        <p class="aboutFooter muted">
+            Este sitio no es un curso teórico, es un <strong>laboratorio vivo</strong>.
+        </p>
+        </section>
+
+      <section class="sidecard">
+        <h2>Nociones importantes</h2>
+        <p class="muted">Chuleta rápida para no olvidar lo esencial.</p>
+
+        <div class="noteGroup">
+          <h3>HTML</h3>
+          <div class="chips">
+            <span class="chip">Semántica</span>
+            <span class="chip">Atributos</span>
+            <span class="chip">Formularios</span>
+            <span class="chip">Accesibilidad</span>
+            <span class="chip">SEO básico</span>
+          </div>
+          <ul class="noteList">
+            <li><strong>Semántica:</strong> usa <code>header</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code>.</li>
+            <li><strong>Atributos clave:</strong> <code>id</code>, <code>class</code>, <code>href</code>, <code>src</code>, <code>alt</code>, <code>title</code>, <code>data-*</code>.</li>
+            <li><strong>Formularios:</strong> siempre <code>&lt;label for=""&gt;</code> + <code>id</code> en el input.</li>
+            <li><strong>Imágenes:</strong> <code>alt</code> descriptivo; <code>loading="lazy"</code> en imágenes no críticas.</li>
+            <li><strong>Accesibilidad:</strong> botones de verdad (<code>&lt;button&gt;</code>), roles solo si es necesario, buen contraste.</li>
+          </ul>
+        </div>
+
+        <div class="noteGroup">
+          <h3>CSS</h3>
+          <div class="chips">
+            <span class="chip">Cascada</span>
+            <span class="chip">Especificidad</span>
+            <span class="chip">Flex</span>
+            <span class="chip">Grid</span>
+            <span class="chip">Responsive</span>
+            <span class="chip">Unidades</span>
+          </div>
+          <ul class="noteList">
+            <li><strong>Cascada:</strong> último gana (si misma especificidad). Evita guerras de CSS.</li>
+            <li><strong>Especificidad:</strong> <code>id</code> &gt; <code>class</code> &gt; etiqueta. Evita abusar de <code>!important</code>.</li>
+            <li><strong>Box model:</strong> usa <code>box-sizing: border-box</code> para cálculos predecibles.</li>
+            <li><strong>Layout:</strong> Flex = 1D (fila/columna), Grid = 2D (filas+columnas).</li>
+            <li><strong>Responsive:</strong> usa <code>max-width</code>, <code>clamp()</code> y media queries cuando toque.</li>
+            <li><strong>Unidades:</strong> <code>rem</code> para tipografía, <code>%</code>/<code>fr</code> para layouts, <code>px</code> para bordes finos.</li>
+            <li><strong>Performance:</strong> transiciones en <code>transform</code> y <code>opacity</code> (mejor que top/left).</li>
+          </ul>
+        </div>
+
+        <div class="noteGroup">
+          <h3>JavaScript</h3>
+          <div class="chips">
+            <span class="chip">DOM</span>
+            <span class="chip">Eventos</span>
+            <span class="chip">Async</span>
+            <span class="chip">Fetch</span>
+            <span class="chip">Storage</span>
+          </div>
+          <ul class="noteList">
+            <li><strong>DOM:</strong> <code>querySelector</code>, <code>createElement</code>, <code>classList</code>, <code>dataset</code>.</li>
+            <li><strong>Eventos:</strong> usa delegación cuando hay muchos elementos (<code>container.addEventListener</code>).</li>
+            <li><strong>Async:</strong> aprende <code>Promise</code>, <code>async/await</code> y manejo de errores (<code>try/catch</code>).</li>
+            <li><strong>Fetch:</strong> verifica <code>res.ok</code>, parsea JSON con cuidado, maneja CORS.</li>
+            <li><strong>localStorage:</strong> guarda strings; para objetos usa <code>JSON.stringify</code>/<code>JSON.parse</code>.</li>
+            <li><strong>Buenas prácticas:</strong> funciones pequeñas, nombres claros, no repetir lógica (DRY).</li>
+          </ul>
+        </div>
+
+        <div class="noteGroup">
+          <h3>Checklist rápido</h3>
+          <ul class="noteList">
+            <li>¿Tus anchors apuntan a <code>id</code> existentes?</li>
+            <li>¿Inputs con <code>label</code>?</li>
+            <li>¿Contraste OK y navegación con teclado?</li>
+            <li>¿CSS sin <code>!important</code> innecesario?</li>
+            <li>¿JS sin errores en consola?</li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <small>© Tu página — Aprendiendo programación web</small>
+  </footer>
+
+  <button id="toTop" class="toTop" type="button" aria-label="Subir al inicio">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
